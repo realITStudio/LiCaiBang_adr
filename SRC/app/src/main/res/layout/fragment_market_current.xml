@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="活期" />
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bct_main_market_current"
+            android:layout_width="match_parent"
+            android:layout_height="256dp" />
+
+    <Button
+        android:layout_margin="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="添加更多"
+        android:gravity="center"/>
+
+</LinearLayout>
