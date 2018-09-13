@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.real.licaibang.R;
 import com.real.licaibang.view.fragment.MarketFragment;
@@ -15,11 +16,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
 
-public class MainActivity extends FragmentActivity{
+public class MainActivity extends FragmentActivity {
 
     @BindView(R.id.rgp_main_navigation)
     RadioGroup mNavigationRgp;
-   @BindView(R.id.rbn_main_market)
+    @BindView(R.id.rbn_main_market)
     RadioButton mMarketRbn;
 
     @Override
@@ -30,7 +31,7 @@ public class MainActivity extends FragmentActivity{
         mMarketRbn.setChecked(true);
         //默认 行情Fragment
         setFragment(new MarketFragment());
-
+//        Toast.makeText(this, "dww到此二游", Toast.LENGTH_SHORT).show();
         mNavigationRgp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -56,7 +57,7 @@ public class MainActivity extends FragmentActivity{
     //切换指定 Fragment
     private void setFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.flout_main_fragment,fragment).commit();
+        transaction.replace(R.id.flout_main_fragment, fragment).commit();
     }
 
 }

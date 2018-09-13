@@ -17,7 +17,6 @@ public class LcbApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Timber.plant(new Timber.DebugTree());
-
         //初始化bugly -- 异常监控
         CrashReport.initCrashReport(LcbApplication.this, "76313c2c90", true);
     }
