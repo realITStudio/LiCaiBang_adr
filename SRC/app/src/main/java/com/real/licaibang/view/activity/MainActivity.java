@@ -31,7 +31,6 @@ public class MainActivity extends FragmentActivity {
         mMarketRbn.setChecked(true);
         //默认 行情Fragment
         setFragment(new MarketFragment());
-//        Toast.makeText(this, "dww到此二游", Toast.LENGTH_SHORT).show();
         mNavigationRgp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
